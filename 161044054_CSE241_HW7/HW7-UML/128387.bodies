@@ -1,0 +1,7 @@
+class MyException
+!!!133507.java!!!	MyException()
+        error="ERROR OCCURED";
+!!!133635.java!!!	MyException(in str : String)
+        error=str;
+!!!133763.java!!!	what() : String
+        return error;

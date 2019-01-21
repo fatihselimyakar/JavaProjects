@@ -1,0 +1,13 @@
+window_sizes 1280 713 300 974 597 64
+cleanlooks_style
+diagrams
+  active  classdiagram_ref 128003 // hw7-classdiagram
+    969 658 100 A4 38 0
+end
+show_stereotypes
+selected class_ref 129667 // PolygonVect
+open
+  classview_ref 128003 // 161044054_CSE241_HW7 2
+  classview_ref 128259 // Diagram
+end
+end

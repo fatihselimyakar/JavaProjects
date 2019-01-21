@@ -1,0 +1,82 @@
+class Circle
+!!!128771.java!!!	Circle()
+        this(0,0,0,'c',0,0,0);
+!!!128899.java!!!	Circle(in radiusValue : int, in positionValue : char)
+        this(0,0,0,positionValue,0,0,radiusValue);
+!!!129027.java!!!	Circle(in x : double, in y : double, in newRotate : int, in p : char, in centerX : double, in centerY : double, in r : double)
+        if(centerX<0||centerY<0||r<0||x<0||y<0)
+            throw new MyException("Circle's Values are false!");
+        else{
+            centerCoordX=centerX;
+            centerCoordY=centerY;
+            radius=r;
+            pos_x=x;
+            pos_y=y;
+        }
+        if(newRotate>360||newRotate<0)
+            throw new MyException("Rotate must be between the 0 and 360");
+        else
+            rotate=newRotate;
+        if(p=='c'||p=='i')
+            position=p;
+        else
+            throw new MyException("Position must be c or i");
+!!!129155.java!!!	getCenterCoordX() : double
+ return centerCoordX;
+!!!129283.java!!!	getCenterCoordY() : double
+ return centerCoordY;
+!!!129411.java!!!	getRadius() : double
+ return radius;
+!!!129539.java!!!	getRotate() : int
+ return rotate;
+!!!129667.java!!!	getPosition() : char
+ return position;
+!!!129795.java!!!	getPosX() : double
+ return pos_x;
+!!!129923.java!!!	getPosY() : double
+ return pos_y;
+!!!130051.java!!!	set(in x : double, in y : double, in newRotate : int, in p : char, in centerX : double, in centerY : double, in r : double) : void
+        if(r<=0||centerX<0||centerY<0||x<0||y<0)
+    		throw new MyException("YOU ENTERED UNVALID RADIUS OR COORDINATE VALUE");
+    	else{
+    		radius=r;
+    		centerCoordX=centerX;
+    		centerCoordY=centerY;
+    		pos_x=x;
+    		pos_y=y;
+    	}
+
+    	if(p!='c'||p!='i'){
+    		throw new MyException("YOU ENTERED UNVALID POSITION VALUE");
+    	}
+    	else
+    		position=p;
+
+    	rotate=newRotate;
+    	return;
+!!!130179.java!!!	area() : double
+ return 3.14*radius*radius;
+!!!130307.java!!!	perimeter() : double
+ return 2*3.14*radius;
+!!!130435.java!!!	increment() : Shape
+        ++centerCoordX;
+        ++centerCoordY;
+        return this;
+!!!130563.java!!!	decrement() : Shape
+        --centerCoordX;
+        --centerCoordY;
+        return this;
+!!!130691.java!!!	compareTo(inout comp : Shape) : int
+        return Double.compare(area(),comp.area());
+!!!130819.java!!!	draw(inout shape : Graphics) : void
+        if(position=='i'){
+            shape.setColor(Color.GREEN);
+            shape.fillOval((int)(centerCoordX-radius),(int)(centerCoordY-radius),2*(int)radius,2*(int)radius);
+        }
+        else if(position=='c'){
+            shape.setColor(Color.RED);
+            shape.fillOval(0,0,2*(int)radius,2*(int)radius);
+        }
+        else{
+            throw new MyException("ERROR IN DRAW");
+        }

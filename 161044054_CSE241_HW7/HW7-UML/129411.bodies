@@ -1,0 +1,86 @@
+class Rectangle
+!!!138115.java!!!	Rectangle()
+        this(0,0,0,0,0,'c');
+!!!138243.java!!!	Rectangle(in newHeight : int, in newWidth : int, in x : double, in y : double, in newRotate : int, in p : char)
+        if(x<0||y<0||newHeight<0||newWidth<0)
+            throw new MyException("Pos_x and pos_y are not smaller than 0");
+        else{
+            pos_x=x;
+            pos_y=y;
+            height=newHeight;
+            width=newWidth;
+        }
+        if(newRotate>360||newRotate<0)
+            throw new MyException("Rotate must be between the 0 and 360");
+        else
+            rotate=newRotate;
+        if(p=='c'||p=='i')
+            position=p;
+        else
+            throw new MyException("Position must be c or i");
+!!!138371.java!!!	Rectangle(in heightVal : int, in widthVal : int, in positionVal : char)
+        this(heightVal,widthVal,0,0,0,positionVal);
+!!!138499.java!!!	getHeight() : int
+ return height;
+!!!138627.java!!!	getWidth() : int
+ return width;
+!!!138755.java!!!	getRotate() : int
+ return rotate;
+!!!138883.java!!!	getPosition() : char
+ return position;
+!!!139011.java!!!	getPosX() : double
+ return pos_x;
+!!!139139.java!!!	getPosY() : double
+ return pos_y;
+!!!139267.java!!!	set(in newHeight : int, in newWidth : int, in x : double, in y : double, in newRotate : int, in p : char) : void
+        if(newHeight<=0)
+    		throw new MyException("Program Aborted!(UNVALID HEIGHT VALUE)");
+    	else
+    		height=newHeight;
+
+    	if(newWidth<=0)
+    		throw new MyException("Program Aborted!(UNVALID WIDTH VALUE)");
+    	else
+    		width=newWidth;
+
+    	if(p!='c'&&p!='i')
+    		throw new MyException("Program Aborted!(UNVALID POSITION VALUE)");
+    	else
+    		position=p;
+
+    	if(x<0||y<0)
+    		throw new MyException("Program Aborted!(UNVALID COORD VALUE)");
+    	else{
+    		pos_x=x;
+    		pos_y=y;
+    	}
+
+    	rotate=newRotate;
+!!!139395.java!!!	area() : double
+        return height*width;
+!!!139523.java!!!	perimeter() : double
+        return 2*(height+width);
+!!!139651.java!!!	increment() : Shape
+        ++pos_x;
+        ++pos_y;
+        return this;
+!!!139779.java!!!	decrement() : Shape
+        --pos_x;
+        --pos_y;
+        return this;
+!!!139907.java!!!	compareTo(inout comp : Shape) : int
+        return Double.compare(area(),comp.area());
+!!!140035.java!!!	draw(inout shape : Graphics) : void
+        if(position=='i'){
+            shape.setColor(Color.GREEN);
+            shape.fillRect((int)pos_x,(int)pos_y,width,height);
+        }
+        else if(position=='c'){
+            shape.setColor(Color.RED);
+            shape.fillRect(0,0,width,height);
+        }
+
+        else{
+            throw new MyException("ERROR IN DRAW");
+        }
+

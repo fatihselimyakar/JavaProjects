@@ -1,0 +1,40 @@
+class Globals
+!!!132611.java!!!	drawAll(inout refArr : Shape [[]], inout shape : Graphics) : void
+        if(refArr.length==0)
+            throw new MyException("YOUR LENGTH IS 0");
+        for(int i=0;i<refArr.length;++i)
+            refArr[i].draw(shape);
+!!!132739.java!!!	convertAll(inout convArr : Shape [[]]) : Shape
+        if(convArr.length==0)
+            throw new MyException("YOUR LENGTH IS 0");
+        PolygonVect[]polyvect=new PolygonVect[convArr.length];
+        for(int i=0;i<convArr.length;++i){
+            if(convArr[i] instanceof Triangle){
+                Triangle ref=(Triangle)convArr[i];
+                polyvect[i]=new PolygonVect(ref);
+            }
+            else if(convArr[i] instanceof Rectangle){
+                Rectangle ref=(Rectangle)convArr[i];
+                polyvect[i]=new PolygonVect(ref);
+            }
+            else if(convArr[i] instanceof Circle){
+                Circle ref=(Circle)convArr[i];
+                polyvect[i]=new PolygonVect(ref);
+            }
+            else{
+                throw new MyException("UNVALID CONVERTED TYPE");
+            }
+        }
+        return polyvect;
+!!!132867.java!!!	sortShapes(inout sortArr : Shape [[]]) : void
+        if(sortArr.length==0)
+            throw new MyException("YOUR LENGTH IS 0");
+        for(int i=0;i<sortArr.length-1;i++){
+             for(int j=0;j<sortArr.length-i-1;j++){
+                 if(sortArr[j].compareTo(sortArr[j+1])>0){
+                     Shape temp=sortArr[j];
+                     sortArr[j]=sortArr[j+1];
+                     sortArr[j+1]=temp;
+                 }
+             }
+        }

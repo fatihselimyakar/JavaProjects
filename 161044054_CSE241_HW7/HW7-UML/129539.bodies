@@ -1,0 +1,131 @@
+class Triangle
+!!!140163.java!!!	Triangle()
+        this(0,'c',0,0,0,0,0,0,0,0,0);
+!!!140291.java!!!	Triangle(in lateralVal : int, in positionVal : char, in trixVal : double, in triyVal : double, in tri2xVal : double, in tri2yVal : double, in tri3xVal : double, in tri3yVal : double, in rotateVal : int, in pos_xVal : double, in pos_yVal : double)
+        if(trixVal<0||tri2xVal<0||tri3xVal<0||triyVal<0||tri2yVal<0||tri3yVal<0||lateralVal<0||pos_xVal<0||pos_yVal<0)
+            throw new MyException("UNVALID TRIANGLE VALUES");
+        else{
+            triX=trixVal;
+            triY=triyVal;
+            tri2X=tri2xVal;
+            tri2Y=tri2yVal;
+            tri3X=tri3xVal;
+            tri3Y=tri3yVal;
+            lateral=lateralVal;
+            pos_x=pos_xVal;
+            pos_y=pos_yVal;
+        }
+        if(rotateVal>360||rotateVal<0)
+            throw new MyException("Rotate must be between the 0 and 360");
+        else
+            rotate=rotateVal;
+        if(positionVal=='c'||positionVal=='i')
+            position=positionVal;
+        else
+            throw new MyException("Position must be c or i");
+!!!140419.java!!!	Triangle(in lateralVal : int, in positionVal : char)
+        this(lateralVal,positionVal,0,0,0,0,0,0,0,0,0);
+!!!140547.java!!!	Triangle(in trixVal : double, in triyVal : double, in tri2xVal : double, in tri2yVal : double, in tri3xVal : double, in tri3yVal : double)
+        this(0,'c',triyVal,triyVal,tri2xVal,tri2yVal,tri3xVal,tri3yVal,0,0,0);
+!!!140675.java!!!	getRotate() : int
+ return rotate;
+!!!140803.java!!!	getPosition() : char
+ return position;
+!!!140931.java!!!	getPosX() : double
+ return pos_x;
+!!!141059.java!!!	getPosY() : double
+ return pos_y;
+!!!141187.java!!!	getTriX() : double
+ return triX;
+!!!141315.java!!!	getTriY() : double
+ return triY;
+!!!141443.java!!!	getTri2X() : double
+ return tri2X;
+!!!141571.java!!!	getTri2Y() : double
+ return tri2Y;
+!!!141699.java!!!	getTri3X() : double
+ return tri3X;
+!!!141827.java!!!	getTri3Y() : double
+ return tri3Y;
+!!!141955.java!!!	getLateral() : int
+ return lateral;
+!!!142083.java!!!	set(in lateralVal : int, in positionVal : char, in trixVal : double, in triyVal : double, in tri2xVal : double, in tri2yVal : double, in tri3xVal : double, in tri3yVal : double, in rotateVal : int, in pos_xVal : double, in pos_yVal : double) : void
+        if(lateralVal>0)
+    		lateral=lateralVal;
+    	else
+    		throw new MyException("Program aborted!(UNVALID LATERAL)");
+
+    	if(positionVal=='i'||positionVal=='c')
+    		position=positionVal;
+    	else
+    		throw new MyException("Program aborted!(UNVALID POSITION)");
+
+    	if(trixVal>=0)
+    		triX=trixVal;
+    	else
+    		throw new MyException("Program aborted!(UNVALID COORDINATE)");
+
+    	if(triyVal>=0)
+    		triY=triyVal;
+    	else
+    		throw new MyException("Program aborted!(UNVALID COORDINATE)");
+
+    	if(tri2xVal>=0)
+    		tri2X=tri2xVal;
+    	else
+    		throw new MyException("Program aborted!(UNVALID COORDINATE)");
+
+    	if(tri2yVal>=0)
+    		tri2Y=tri2yVal;
+    	else
+    		throw new MyException("Program aborted!(UNVALID COORDINATE)");
+
+    	if(tri3xVal>=0)
+    		tri3X=tri3xVal;
+    	else
+    		throw new MyException("Program aborted!(UNVALID COORDINATE)");
+
+    	if(tri3yVal>=0)
+    		tri3Y=tri3yVal;
+    	else
+    		throw new MyException("Program aborted!(UNVALID COORDINATE)");
+
+    	rotate=rotateVal;
+
+!!!142211.java!!!	area() : double
+ return (lateral*lateral*1.732)/4.;
+!!!142339.java!!!	perimeter() : double
+ return 3*lateral;
+!!!142467.java!!!	increment() : Shape
+        ++triX;
+        ++triY;
+        ++tri2Y;
+        ++tri2X;
+        ++tri3X;
+        ++tri3Y;
+        return this;
+!!!142595.java!!!	decrement() : Shape
+        --triX;
+        --triY;
+        --tri2Y;
+        --tri2X;
+        --tri3X;
+        --tri3Y;
+        return this;
+!!!142723.java!!!	compareTo(inout comp : Shape) : int
+        return Double.compare(area(),comp.area());
+!!!142851.java!!!	draw(inout shape : Graphics) : void
+        java.awt.Polygon p = new java.awt.Polygon();
+        if(position=='i'){
+            p.addPoint((int)triX,(int)triY); p.addPoint((int)tri2X,(int)tri2Y); p.addPoint((int)tri3X,(int)tri3Y);
+            shape.setColor(Color.GREEN);
+            shape.fillPolygon(p);
+        }
+        else if(position=='c'){
+            p.addPoint((int)(lateral/2.0),0); p.addPoint(0,(int)(lateral*SQR3DIV2)); p.addPoint(lateral,(int)(lateral*SQR3DIV2));
+            shape.setColor(Color.RED);
+            shape.fillPolygon(p);
+        }
+        else{
+            throw new MyException("ERROR IN DRAW");
+        }

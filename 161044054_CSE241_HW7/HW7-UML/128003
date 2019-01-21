@@ -1,0 +1,3041 @@
+format 221
+"161044054_CSE241_HW7 2" // 161044054_CSE241_HW7 2
+  revision 1
+  modified_by 3 "fatihselimyakar"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  java_dir "/Users/fatihselimyakar/Desktop/161044054_CSE241_HW7 2/"
+  classview 128003 "161044054_CSE241_HW7 2"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    class 128003 "Circle"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 128131 // <realization>
+	relation 128131 -_-|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 128131 // <realization>
+	  b parent class_ref 128131 // Shape
+      end
+
+      attribute 128003 "centerCoordX"
+	private explicit_type "double"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "center point's x coordinate"
+      end
+
+      attribute 128131 "centerCoordY"
+	private explicit_type "double"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "center point's y coordinate"
+      end
+
+      attribute 128259 "radius"
+	private explicit_type "double"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128387 "pos_x"
+	private explicit_type "double"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128515 "pos_y"
+	private explicit_type "double"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128643 "rotate"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128771 "position"
+	private explicit_type "char"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      operation 128771 "Circle"
+	public explicit_return_type ""
+	nparams 0
+	nexceptions 1
+	  exception class_ref 128387 // MyException
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "Circle() no parameter constructor it uses other constructor
+@exception MyException bringing other constructor
+"
+      end
+
+      operation 128899 "Circle"
+	public explicit_return_type ""
+	nparams 2
+	  param in name "radiusValue" explicit_type "int"
+	  param in name "positionValue" explicit_type "char"
+	nexceptions 1
+	  exception class_ref 128387 // MyException
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "Circle() two parameter constructor it uses other constructor
+@param radiusValue is hold the radius.
+@param positionValue is hold the position for ex. inner(i) or container(c).
+@exception MyException bringing other constructor
+"
+      end
+
+      operation 129027 "Circle"
+	public explicit_return_type ""
+	nparams 7
+	  param in name "x" explicit_type "double"
+	  param in name "y" explicit_type "double"
+	  param in name "newRotate" explicit_type "int"
+	  param in name "p" explicit_type "char"
+	  param in name "centerX" explicit_type "double"
+	  param in name "centerY" explicit_type "double"
+	  param in name "r" explicit_type "double"
+	nexceptions 1
+	  exception class_ref 128387 // MyException
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}, ${t1} ${p1}, ${t2} ${p2}, ${t3} ${p3}, ${t4} ${p4}, ${t5} ${p5}, ${t6} ${p6}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "Circle()'s main constructor.
+@param x coord value.
+@param y second coord value.
+@param newRotate degree for rotating.
+@param p position value(if inner 'i' in container 'c').
+@param centerX center's x coordinate.
+@param centerY center's y coordinate.
+@param r radius value.
+@exception MyException unvalid parameter.
+"
+      end
+
+      operation 129155 "getCenterCoordX"
+	public explicit_return_type "double"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "getter.
+@return center y coordinate.
+"
+      end
+
+      operation 129283 "getCenterCoordY"
+	public explicit_return_type "double"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "getter.
+@return center y coordinate.
+"
+      end
+
+      operation 129411 "getRadius"
+	public explicit_return_type "double"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "getter.
+@return radius.
+"
+      end
+
+      operation 129539 "getRotate"
+	public explicit_return_type "int"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "getter.
+@return rotate.
+"
+      end
+
+      operation 129667 "getPosition"
+	public explicit_return_type "char"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "getter.
+@return position.
+"
+      end
+
+      operation 129795 "getPosX"
+	public explicit_return_type "double"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "getter.
+@return pos_x.
+"
+      end
+
+      operation 129923 "getPosY"
+	public explicit_return_type "double"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "getter.
+@return pos_y.
+"
+      end
+
+      operation 130051 "set"
+	public explicit_return_type "void"
+	nparams 7
+	  param in name "x" explicit_type "double"
+	  param in name "y" explicit_type "double"
+	  param in name "newRotate" explicit_type "int"
+	  param in name "p" explicit_type "char"
+	  param in name "centerX" explicit_type "double"
+	  param in name "centerY" explicit_type "double"
+	  param in name "r" explicit_type "double"
+	nexceptions 1
+	  exception class_ref 128387 // MyException
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}, ${t1} ${p1}, ${t2} ${p2}, ${t3} ${p3}, ${t4} ${p4}, ${t5} ${p5}, ${t6} ${p6}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "Circle()'s set.
+@param x coord value.
+@param y second coord value.
+@param newRotate degree for rotating.
+@param p position value(if inner 'i' in container 'c').
+@param centerX center's x coordinate.
+@param centerY center's y coordinate.
+@param r radius value.
+@exception MyException unvalid parameter.
+"
+      end
+
+      operation 130179 "area"
+	public explicit_return_type "double"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "calculate the one circle's area.
+@return double area returning.
+"
+      end
+
+      operation 130307 "perimeter"
+	public explicit_return_type "double"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "calculate the one circle's perimeter.
+@return double area returning.
+"
+      end
+
+      operation 130435 "increment"
+	public return_type class_ref 128131 // Shape
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "add the circle's center coordinates 1.0.
+@return Shape object.
+"
+      end
+
+      operation 130563 "decrement"
+	public return_type class_ref 128131 // Shape
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "decrement the circle's center coordinates 1.0.
+@return Shape object.
+"
+      end
+
+      operation 130691 "compareTo"
+	public explicit_return_type "int"
+	nparams 1
+	  param inout name "comp" type class_ref 128131 // Shape
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "compare the other Shape object based on areas.
+@param comp the conparing shape object.
+@return returns int handled compare value(like the strcmp).
+"
+      end
+
+      operation 130819 "draw"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "shape" explicit_type "Graphics"
+	nexceptions 1
+	  exception class_ref 128387 // MyException
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "drawing method in JPanel.
+@param shape the drawing shape object.
+@exception MyException if position is different than 'i' or 'c'.
+"
+      end
+    end
+
+    class 128131 "Shape"
+      visibility public stereotype "interface"
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}interface ${name}${extends} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "Shape interface that is all others implements this.
+@author fatihselimyakar
+@version 1.0.0
+"
+      classrelation 128003 // <realization>
+	relation 128003 -_-|>
+	  a public
+	    java "${type}<Shape>"
+	    classrelation_ref 128003 // <realization>
+	  b parent class_ref 128259 // Comparable
+      end
+
+      operation 128003 "area"
+	public explicit_return_type "double"
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "The area() method returns owned class's shapes's area.
+@return double returning.
+"
+      end
+
+      operation 128131 "perimeter"
+	public explicit_return_type "double"
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "The perimeter() method returns owned class's shapes's perimeter.
+@return double returning.
+"
+      end
+
+      operation 128259 "increment"
+	public return_type class_ref 128131 // Shape
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "The increment() method adds 1.0 all coordinates.
+@return incremented Shape object returning.
+"
+      end
+
+      operation 128387 "decrement"
+	public return_type class_ref 128131 // Shape
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "The decrement() method adds 1.0 all coordinates.
+@return incremented Shape object returning.
+"
+      end
+
+      operation 128515 "compareTo"
+	public explicit_return_type "int"
+	nparams 1
+	  param inout name "comp" type class_ref 128131 // Shape
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "The compareTo() method compares two object handled with areas.
+@param comp get the second object for comparing.
+@return the compare value returning.
+"
+      end
+
+      operation 128643 "draw"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "shape" explicit_type "Graphics"
+	nexceptions 1
+	  exception class_ref 128387 // MyException
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "The draw(); method draw the GUI based the object
+@param shape object that is printed out.
+@exception MyException if the user entered unvalid shape than throw the error.
+"
+      end
+    end
+
+    class 128387 "MyException"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "The exception class that is extend Exception.
+@author fatihselimyakar
+@version 1.0.0
+"
+      classrelation 128771 // <generalisation>
+	relation 128771 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 128771 // <generalisation>
+	  b parent class_ref 128899 // Exception
+      end
+
+      attribute 129539 "error"
+	private explicit_type "String"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      operation 133507 "MyException"
+	public explicit_return_type ""
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "Default constructor.
+"
+      end
+
+      operation 133635 "MyException"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "str" explicit_type "String"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "One parameter constructor.
+@param str that is Error information.
+"
+      end
+
+      operation 133763 "what"
+	public explicit_return_type "String"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "Extending what method.
+@return error information returnin.
+"
+      end
+    end
+
+    class 128515 "ComposedShape"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 128259 // <realization>
+	relation 128259 -_-|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 128259 // <realization>
+	  b parent class_ref 128131 // Shape
+      end
+
+      attribute 128899 "SQR3DIV2"
+	class_attribute const_attribute public explicit_type "double"
+	init_value " 0.866"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 129027 "SQR3"
+	class_attribute const_attribute public explicit_type "double"
+	init_value " 1.7320"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 128387 // inner (<unidirectional association>)
+	relation 128387 --->
+	  a role_name "inner" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 128387 // inner (<unidirectional association>)
+	  b parent class_ref 128131 // Shape
+      end
+
+      classrelation 128515 // container (<unidirectional association>)
+	relation 128515 --->
+	  a role_name "container" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 128515 // container (<unidirectional association>)
+	  b parent class_ref 128131 // Shape
+      end
+
+      classrelation 128643 // shapes (<unidirectional association>)
+	relation 128643 --->
+	  a role_name "shapes" multiplicity "[]" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type}${multiplicity} ${name}${value};
+"
+	    classrelation_ref 128643 // shapes (<unidirectional association>)
+	  b parent class_ref 128131 // Shape
+      end
+
+      attribute 129155 "size"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      operation 130947 "ComposedShape"
+	public explicit_return_type ""
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "ComposedShape() no parameter constructor that assigns null ptr and defaulted array size.
+"
+      end
+
+      operation 131075 "ComposedShape"
+	public explicit_return_type ""
+	nparams 2
+	  param inout name "in" type class_ref 128131 // Shape
+	  param inout name "con" type class_ref 128131 // Shape
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "ComposedShape() constructor that assign parameter to data members and defaulted array size.
+@param in inner shape's object.
+@param con container shape's object.
+"
+      end
+
+      operation 131203 "getSize"
+	public explicit_return_type "int"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "Getter that is returning size.
+@return return the size.
+"
+      end
+
+      operation 131331 "getInner"
+	public return_type class_ref 128131 // Shape
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "Getter that is returning shape of inner.
+@return return the inner shape.
+"
+      end
+
+      operation 131459 "getContainer"
+	public return_type class_ref 128131 // Shape
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "Getter that is returning shape of container.
+@return return the container shape.
+"
+      end
+
+      operation 131587 "getShapePtrVec"
+	public return_type class_ref 128131 // Shape
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type}[] ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "Getter that is returning shape array.
+@return return the array of shapes
+"
+      end
+
+      operation 131715 "optimalFit"
+	public explicit_return_type "void"
+	nparams 0
+	nexceptions 1
+	  exception class_ref 128387 // MyException
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "optimalFit() provides a calculates for the inner and fit in the container.
+@exception MyException If the container and inner type is not incompetible then throws error.
+"
+      end
+
+      operation 131843 "area"
+	public explicit_return_type "double"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "The area() method returns owned class's shapes's total area.
+@return double total area returning.
+"
+      end
+
+      operation 131971 "perimeter"
+	public explicit_return_type "double"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "The perimeter() method returns owned class's shapes's total perimeter.
+@return double total perimeter returning.
+"
+      end
+
+      operation 132099 "increment"
+	public return_type class_ref 128131 // Shape
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "The increment() method adds 1.0 all coordinates.
+@return incremented Shape object returning.
+"
+      end
+
+      operation 132227 "decrement"
+	public return_type class_ref 128131 // Shape
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "The decrement() method adds 1.0 all coordinates.
+@return incremented Shape object returning.
+"
+      end
+
+      operation 132355 "compareTo"
+	public explicit_return_type "int"
+	nparams 1
+	  param inout name "comp" type class_ref 128131 // Shape
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "The compareTo() method compares two object handled with areas.
+@param comp get the second object for comparing.
+@return the compare value returning.
+"
+      end
+
+      operation 132483 "draw"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "shape" explicit_type "Graphics"
+	nexceptions 1
+	  exception class_ref 128387 // MyException
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "The draw(); method draw the GUI based the object
+@param shape object that is printed out.
+@exception MyException if the user entered unvalid shape than throw the error.
+"
+      end
+    end
+
+    class 128643 "Globals"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 132611 "drawAll"
+	class_operation public explicit_return_type "void"
+	nparams 2
+	  param inout name "refArr" type class_ref 128131 // Shape
+	multiplicity "[]"
+	  param inout name "shape" explicit_type "Graphics"
+	nexceptions 1
+	  exception class_ref 128387 // MyException
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0}[] ${p0}, ${t1} ${p1}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "Draws all of the shapes in Shape array .
+@param refArr shape array that will be draw.
+@param shape shape where is the printed out.
+@exception MyException bringing in the draw methods or array length is 0.
+"
+      end
+
+      operation 132739 "convertAll"
+	class_operation public return_type class_ref 128131 // Shape
+	nparams 1
+	  param inout name "convArr" type class_ref 128131 // Shape
+	multiplicity "[]"
+	nexceptions 1
+	  exception class_ref 128387 // MyException
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type}[] ${name}${(}${t0}[] ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "Convert all of the shapes in Shape array and return new polygon array.
+@param convArr shape array that will be converted.
+@return return a new array that is polygon.
+@exception MyException if type is unvalid then throws or array length is 0.
+"
+      end
+
+      operation 132867 "sortShapes"
+	class_operation public explicit_return_type "void"
+	nparams 1
+	  param inout name "sortArr" type class_ref 128131 // Shape
+	multiplicity "[]"
+	nexceptions 1
+	  exception class_ref 128387 // MyException
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0}[] ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "compare all of the shapes in Shape array and sort them.
+@param sortArr shape array that will be sort.
+@exception MyException if array's length is 0 then throws.
+"
+      end
+    end
+
+    class 128771 "HW7"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 129283 "frame"
+	private explicit_type "JFrame"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 129411 "comboBox"
+	private explicit_type "String"
+	stereotype "JComboBox"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      operation 132995 "main"
+	class_operation public explicit_return_type "void"
+	nparams 1
+	  param inout name "args" explicit_type "String"
+	multiplicity "[]"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0}[] ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "Launch the application.
+@param args command line argument.
+"
+      end
+
+      operation 133123 "HW7"
+	public explicit_return_type ""
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "Create the application.
+"
+      end
+
+      operation 133251 "initialize"
+	private explicit_return_type "void"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "Initialize the contents of the frame.
+"
+      end
+
+      operation 133379 "getComboBox"
+	public explicit_return_type "JComboBox<String>"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+    end
+
+    class 129027 "Polygon"
+      abstract visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 128899 // <realization>
+	relation 128899 -_-|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 128899 // <realization>
+	  b parent class_ref 128131 // Shape
+      end
+
+      attribute 129667 "pos_x"
+	protected explicit_type "double"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 129795 "pos_y"
+	protected explicit_type "double"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 129923 "rotate"
+	protected explicit_type "int"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 130051 "position"
+	protected explicit_type "char"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 130179 "areaPoly"
+	protected explicit_type "double"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 130307 "periPoly"
+	protected explicit_type "double"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      operation 133891 "Polygon"
+	public explicit_return_type ""
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "No parameter constructor.Other constructor calling in it.
+"
+      end
+
+      operation 134019 "Polygon"
+	public explicit_return_type ""
+	nparams 4
+	  param in name "x" explicit_type "double"
+	  param in name "y" explicit_type "double"
+	  param in name "newRotate" explicit_type "int"
+	  param in name "p" explicit_type "char"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}, ${t1} ${p1}, ${t2} ${p2}, ${t3} ${p3}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "Base constructor.
+@param x coord x.
+@param y coord y.
+@param newRotate the degree of rotate.
+@param p position val('i' or 'c').
+"
+      end
+
+      class 129155 "Point2d"
+	visibility public 
+	cpp_decl ""
+	java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+	php_decl ""
+	python_2_2 python_decl ""
+	idl_decl ""
+	explicit_switch_type ""
+	mysql_decl ""
+	
+	attribute 130435 "polygonX"
+	  private explicit_type "double"
+	  cpp_decl ""
+	  java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	  php_decl ""
+	  python_decl ""
+	  idl_decl ""
+	  mysql_decl ""
+	  MysqlColumn
+	end
+
+	attribute 130563 "polygonY"
+	  private explicit_type "double"
+	  cpp_decl ""
+	  java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	  php_decl ""
+	  python_decl ""
+	  idl_decl ""
+	  mysql_decl ""
+	  MysqlColumn
+	end
+
+	operation 134147 "Point2d"
+	  public explicit_return_type ""
+	  nparams 0
+	  
+	  preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	  
+	  
+	  
+	end
+
+	operation 134275 "Point2d"
+	  public explicit_return_type ""
+	  nparams 2
+	    param in name "newX" explicit_type "double"
+	    param in name "newY" explicit_type "double"
+	  nexceptions 1
+	    exception class_ref 128387 // MyException
+	  
+	  preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${throws}${staticnl}{
+  ${body}}
+"
+	  
+	  
+	  
+	end
+
+	operation 134403 "set"
+	  public explicit_return_type "void"
+	  nparams 2
+	    param in name "newX" explicit_type "double"
+	    param in name "newY" explicit_type "double"
+	  nexceptions 1
+	    exception class_ref 128387 // MyException
+	  
+	  preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${throws}${staticnl}{
+  ${body}}
+"
+	  
+	  
+	  
+	end
+
+	operation 134531 "getX"
+	  public explicit_return_type "double"
+	  nparams 0
+	  
+	  preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	  
+	  
+	  
+	end
+
+	operation 134659 "getY"
+	  public explicit_return_type "double"
+	  nparams 0
+	  
+	  preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	  
+	  
+	  
+	end
+      end
+
+      operation 134787 "getPosX"
+	public explicit_return_type "double"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "getter.
+@return coordinate of x.
+"
+      end
+
+      operation 134915 "getPosY"
+	public explicit_return_type "double"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "getter.
+@return coordinate of y.
+"
+      end
+
+      operation 135043 "getRotate"
+	public explicit_return_type "int"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "getter.
+@return degree of rotation.
+"
+      end
+
+      operation 135171 "getPosition"
+	public explicit_return_type "char"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "getter.
+@return 'i' or 'c' issue.
+"
+      end
+
+      operation 135299 "draw"
+	abstract public explicit_return_type "void"
+	nparams 1
+	  param inout name "shape" explicit_type "Graphics"
+	nexceptions 1
+	  exception class_ref 128387 // MyException
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "The draw(); method draw the GUI based the object
+@param shape object that is printed out.
+@exception MyException throws if there are unvalid values
+"
+      end
+
+      operation 135427 "area"
+	public explicit_return_type "double"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "The area() method returns owned class's shapes's area.
+@return double returning.
+"
+      end
+
+      operation 135555 "perimeter"
+	public explicit_return_type "double"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "The perimeter() method returns owned class's shapes's perimeter.
+@return double returning.
+"
+      end
+
+      operation 135683 "increment"
+	public return_type class_ref 128131 // Shape
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "The increment() method adds 1.0 all coordinates.
+@return incremented Shape object returning.
+"
+      end
+
+      operation 135811 "decrement"
+	public return_type class_ref 128131 // Shape
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "The decrement() method adds 1.0 all coordinates.
+@return incremented Shape object returning.
+"
+      end
+
+      operation 135939 "compareTo"
+	public explicit_return_type "int"
+	nparams 1
+	  param inout name "comp" type class_ref 128131 // Shape
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "The compareTo() method compares two object handled with areas.
+@param comp get the second object for comparing.
+@return the compare value returning.
+"
+      end
+    end
+
+    class 129283 "PolygonDyn"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 129027 // <generalisation>
+	relation 129027 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 129027 // <generalisation>
+	  b parent class_ref 129027 // Polygon
+      end
+
+      classrelation 129155 // array (<unidirectional association>)
+	relation 129155 --->
+	  a role_name "array" multiplicity "[]" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type}${multiplicity} ${name}${value};
+"
+	    classrelation_ref 129155 // array (<unidirectional association>)
+	  b parent class_ref 129155 // Point2d
+      end
+
+      operation 136067 "CircleEquationY"
+	private explicit_return_type "double"
+	nparams 4
+	  param in name "centerX" explicit_type "double"
+	  param in name "centerY" explicit_type "double"
+	  param in name "radius" explicit_type "int"
+	  param in name "yourX" explicit_type "double"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}, ${t1} ${p1}, ${t2} ${p2}, ${t3} ${p3}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "helper function that provide circle's coordinates.
+"
+      end
+
+      operation 136195 "PolygonDyn"
+	public explicit_return_type ""
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "no parameter constructor that construct the array and calls super classe's constructor.
+"
+      end
+
+      operation 136323 "PolygonDyn"
+	public explicit_return_type ""
+	nparams 1
+	  param inout name "pointVector" type class_ref 129155 // Point2d
+	multiplicity "[]"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0}[] ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "no parameter constructor that construct the array and calls super classe's constructor.
+@param pointVector the construct based on this Array.
+"
+      end
+
+      operation 136451 "PolygonDyn"
+	public explicit_return_type ""
+	nparams 1
+	  param inout name "rec" type class_ref 129411 // Rectangle
+	nexceptions 1
+	  exception class_ref 128387 // MyException
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "Rectangle constructor that construct based on Rectangle object.
+@param rec that is Rectangle that will convert.
+@exception MyException if entered parameter is not valid then throws exception.
+"
+      end
+
+      operation 136579 "PolygonDyn"
+	public explicit_return_type ""
+	nparams 1
+	  param inout name "tri" type class_ref 129539 // Triangle
+	nexceptions 1
+	  exception class_ref 128387 // MyException
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "Triangle constructor that construct based on Triangle object.
+@param tri that is Triangle that will convert.
+@exception MyException if entered parameter is not valid then throws exception.
+"
+      end
+
+      operation 136707 "PolygonDyn"
+	public explicit_return_type ""
+	nparams 1
+	  param inout name "cir" type class_ref 128003 // Circle
+	nexceptions 1
+	  exception class_ref 128387 // MyException
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "Circle constructor that construct based on Circle object.
+@param cir that is Circle that will convert.
+@exception MyException if entered parameter is not valid then throws exception.
+"
+      end
+
+      operation 136835 "at"
+	public return_type class_ref 129155 // Point2d
+	nparams 1
+	  param in name "index" explicit_type "int"
+	nexceptions 1
+	  exception class_ref 128387 // MyException
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "return the that indexes showed value.
+@param index index value.
+@exception MyException if entered parameter is not valid then throws exception.
+@return returns in it indexes value.
+"
+      end
+
+      operation 136963 "draw"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "shape" explicit_type "Graphics"
+	nexceptions 1
+	  exception class_ref 128387 // MyException
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "Draw the owning parameters.
+@param shape JFrame that will print out.
+@exception MyException if entered parameter is not valid then throws exception.
+"
+      end
+    end
+
+    class 129411 "Rectangle"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 129539 // <realization>
+	relation 129539 -_-|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 129539 // <realization>
+	  b parent class_ref 128131 // Shape
+      end
+
+      attribute 130691 "pos_x"
+	private explicit_type "double"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 130819 "pos_y"
+	private explicit_type "double"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 130947 "rotate"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 131075 "position"
+	private explicit_type "char"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 131203 "height"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 131331 "width"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      operation 138115 "Rectangle"
+	public explicit_return_type ""
+	nparams 0
+	nexceptions 1
+	  exception class_ref 128387 // MyException
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "no parameter constructor that calls other constructor.
+@exception MyException bring other constructor.
+"
+      end
+
+      operation 138243 "Rectangle"
+	public explicit_return_type ""
+	nparams 6
+	  param in name "newHeight" explicit_type "int"
+	  param in name "newWidth" explicit_type "int"
+	  param in name "x" explicit_type "double"
+	  param in name "y" explicit_type "double"
+	  param in name "newRotate" explicit_type "int"
+	  param in name "p" explicit_type "char"
+	nexceptions 1
+	  exception class_ref 128387 // MyException
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}, ${t1} ${p1}, ${t2} ${p2}, ${t3} ${p3}, ${t4} ${p4}, ${t5} ${p5}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "base constructor
+@param newHeight the rectangle's height.
+@param newWidth the rectangle's width.
+@param x the rectangle's x coordinate.
+@param y the rectangle's y coordinate.
+@param newRotate the rectangle's rotate degree.
+@param p the rectangle's position 'i' or 'c'.
+@exception MyException throws exception if parameters are unvalid.
+"
+      end
+
+      operation 138371 "Rectangle"
+	public explicit_return_type ""
+	nparams 3
+	  param in name "heightVal" explicit_type "int"
+	  param in name "widthVal" explicit_type "int"
+	  param in name "positionVal" explicit_type "char"
+	nexceptions 1
+	  exception class_ref 128387 // MyException
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}, ${t1} ${p1}, ${t2} ${p2}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "three parameter constructor
+@param heightVal the rectangle's height.
+@param widthVal the rectangle's width.
+@param positionVal the rectangle's position 'i' or 'c'.
+@exception MyException throws exception if parameters are unvalid(bring the other constructor).
+"
+      end
+
+      operation 138499 "getHeight"
+	public explicit_return_type "int"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "getter
+@return return height.
+"
+      end
+
+      operation 138627 "getWidth"
+	public explicit_return_type "int"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "getter
+@return return width.
+"
+      end
+
+      operation 138755 "getRotate"
+	public explicit_return_type "int"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "getter
+@return return rotate.
+"
+      end
+
+      operation 138883 "getPosition"
+	public explicit_return_type "char"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "getter
+@return return position.
+"
+      end
+
+      operation 139011 "getPosX"
+	public explicit_return_type "double"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "getter
+@return return coordinate x of rectangle.
+"
+      end
+
+      operation 139139 "getPosY"
+	public explicit_return_type "double"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "getter
+@return return coordinate y of rectangle.
+"
+      end
+
+      operation 139267 "set"
+	public explicit_return_type "void"
+	nparams 6
+	  param in name "newHeight" explicit_type "int"
+	  param in name "newWidth" explicit_type "int"
+	  param in name "x" explicit_type "double"
+	  param in name "y" explicit_type "double"
+	  param in name "newRotate" explicit_type "int"
+	  param in name "p" explicit_type "char"
+	nexceptions 1
+	  exception class_ref 128387 // MyException
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}, ${t1} ${p1}, ${t2} ${p2}, ${t3} ${p3}, ${t4} ${p4}, ${t5} ${p5}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "set the rectangle's values.
+@param newHeight the rectangle's height.
+@param newWidth the rectangle's width.
+@param x the rectangle's x coordinate.
+@param y the rectangle's y coordinate.
+@param newRotate the rectangle's rotate degree.
+@param p the rectangle's position 'i' or 'c'.
+@exception MyException throws exception if parameters are unvalid.
+"
+      end
+
+      operation 139395 "area"
+	public explicit_return_type "double"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "calculate the one rectangle's area.
+@return double area returning.
+"
+      end
+
+      operation 139523 "perimeter"
+	public explicit_return_type "double"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "calculate the one rectangle's perimeter.
+@return double area returning.
+"
+      end
+
+      operation 139651 "increment"
+	public return_type class_ref 128131 // Shape
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "add the rectangle's center coordinates 1.0.
+@return Shape object.
+"
+      end
+
+      operation 139779 "decrement"
+	public return_type class_ref 128131 // Shape
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "decrement the circle's center coordinates 1.0.
+@return Shape object.
+"
+      end
+
+      operation 139907 "compareTo"
+	public explicit_return_type "int"
+	nparams 1
+	  param inout name "comp" type class_ref 128131 // Shape
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "compare the other Shape object based on areas.
+@param comp the conparing shape object.
+@return returns int handled compare value(like the strcmp).
+"
+      end
+
+      operation 140035 "draw"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "shape" explicit_type "Graphics"
+	nexceptions 1
+	  exception class_ref 128387 // MyException
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "drawing method in JPanel.
+@param shape the drawing shape object.
+@exception MyException if position is different than 'i' or 'c'.
+"
+      end
+    end
+
+    class 129539 "Triangle"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 129667 // <realization>
+	relation 129667 -_-|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 129667 // <realization>
+	  b parent class_ref 128131 // Shape
+      end
+
+      attribute 131459 "SQR3DIV2"
+	class_attribute const_attribute public explicit_type "double"
+	init_value " 0.866"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 131587 "SQR3"
+	class_attribute const_attribute public explicit_type "double"
+	init_value " 1.7320"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 131715 "lateral"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 131843 "triX"
+	private explicit_type "double"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 131971 "triY"
+	private explicit_type "double"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 132099 "tri2X"
+	private explicit_type "double"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 132227 "tri2Y"
+	private explicit_type "double"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 132355 "tri3X"
+	private explicit_type "double"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 132483 "tri3Y"
+	private explicit_type "double"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 132611 "pos_x"
+	private explicit_type "double"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 132739 "pos_y"
+	private explicit_type "double"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 132867 "rotate"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 132995 "position"
+	private explicit_type "char"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      operation 140163 "Triangle"
+	public explicit_return_type ""
+	nparams 0
+	nexceptions 1
+	  exception class_ref 128387 // MyException
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "no parameter constructor that calls other constructor.
+@exception MyException bring other constructor.
+"
+      end
+
+      operation 140291 "Triangle"
+	public explicit_return_type ""
+	nparams 11
+	  param in name "lateralVal" explicit_type "int"
+	  param in name "positionVal" explicit_type "char"
+	  param in name "trixVal" explicit_type "double"
+	  param in name "triyVal" explicit_type "double"
+	  param in name "tri2xVal" explicit_type "double"
+	  param in name "tri2yVal" explicit_type "double"
+	  param in name "tri3xVal" explicit_type "double"
+	  param in name "tri3yVal" explicit_type "double"
+	  param in name "rotateVal" explicit_type "int"
+	  param in name "pos_xVal" explicit_type "double"
+	  param in name "pos_yVal" explicit_type "double"
+	nexceptions 1
+	  exception class_ref 128387 // MyException
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}, ${t1} ${p1}, ${t2} ${p2}, ${t3} ${p3}, ${t4} ${p4}, ${t5} ${p5}, ${t6} ${p6}, ${t7} ${p7}, ${t8} ${p8}, ${t9} ${p9}, ${t10} ${p10}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "base constructor
+@param lateralVal that is the lateral value.
+@param positionVal 'i' or 'c'(container and inner).
+@param trixVal x coord of first vertice.
+@param triyVal y coord of first vertice.
+@param tri2xVal x coord of second vertice.
+@param tri2yVal y coord of second vertice.
+@param tri3xVal x coord of third vertice.
+@param tri3yVal y coord of third vertice.
+@param rotateVal rotating degree.
+@param pos_xVal main coord x.
+@param pos_yVal main coord y.
+@exception MyException throws exception if parameters are unvalid.
+"
+      end
+
+      operation 140419 "Triangle"
+	public explicit_return_type ""
+	nparams 2
+	  param in name "lateralVal" explicit_type "int"
+	  param in name "positionVal" explicit_type "char"
+	nexceptions 1
+	  exception class_ref 128387 // MyException
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "two parameter constructor.
+@param lateralVal that is the lateral value.
+@param positionVal 'i' or 'c'(container and inner).
+@exception MyException throws exception if parameters are unvalid bringing other constructor .
+"
+      end
+
+      operation 140547 "Triangle"
+	public explicit_return_type ""
+	nparams 6
+	  param in name "trixVal" explicit_type "double"
+	  param in name "triyVal" explicit_type "double"
+	  param in name "tri2xVal" explicit_type "double"
+	  param in name "tri2yVal" explicit_type "double"
+	  param in name "tri3xVal" explicit_type "double"
+	  param in name "tri3yVal" explicit_type "double"
+	nexceptions 1
+	  exception class_ref 128387 // MyException
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}, ${t1} ${p1}, ${t2} ${p2}, ${t3} ${p3}, ${t4} ${p4}, ${t5} ${p5}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "@param trixVal x coord of first vertice.
+@param triyVal y coord of first vertice.
+@param tri2xVal x coord of second vertice.
+@param tri2yVal y coord of second vertice.
+@param tri3xVal x coord of third vertice.
+@param tri3yVal y coord of third vertice.
+@exception MyException throws exception if parameters are unvalid bringing other constructor .
+"
+      end
+
+      operation 140675 "getRotate"
+	public explicit_return_type "int"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "getter.
+@return return degree of rotate.
+"
+      end
+
+      operation 140803 "getPosition"
+	public explicit_return_type "char"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "getter.
+@return return position.
+"
+      end
+
+      operation 140931 "getPosX"
+	public explicit_return_type "double"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "getter.
+@return return main x coord.
+"
+      end
+
+      operation 141059 "getPosY"
+	public explicit_return_type "double"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "getter.
+@return return main y coord.
+"
+      end
+
+      operation 141187 "getTriX"
+	public explicit_return_type "double"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "getter.
+@return return first vertice's x coord.
+"
+      end
+
+      operation 141315 "getTriY"
+	public explicit_return_type "double"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "getter.
+@return return first vertice's y coord.
+"
+      end
+
+      operation 141443 "getTri2X"
+	public explicit_return_type "double"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "getter.
+@return return second vertice's x coord.
+"
+      end
+
+      operation 141571 "getTri2Y"
+	public explicit_return_type "double"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "getter.
+@return return second vertice's y coord.
+"
+      end
+
+      operation 141699 "getTri3X"
+	public explicit_return_type "double"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "getter.
+@return return third vertice's x coord.
+"
+      end
+
+      operation 141827 "getTri3Y"
+	public explicit_return_type "double"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "getter.
+@return return third vertice's y coord.
+"
+      end
+
+      operation 141955 "getLateral"
+	public explicit_return_type "int"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "getter.
+@return return triangle's lateral.
+"
+      end
+
+      operation 142083 "set"
+	public explicit_return_type "void"
+	nparams 11
+	  param in name "lateralVal" explicit_type "int"
+	  param in name "positionVal" explicit_type "char"
+	  param in name "trixVal" explicit_type "double"
+	  param in name "triyVal" explicit_type "double"
+	  param in name "tri2xVal" explicit_type "double"
+	  param in name "tri2yVal" explicit_type "double"
+	  param in name "tri3xVal" explicit_type "double"
+	  param in name "tri3yVal" explicit_type "double"
+	  param in name "rotateVal" explicit_type "int"
+	  param in name "pos_xVal" explicit_type "double"
+	  param in name "pos_yVal" explicit_type "double"
+	nexceptions 1
+	  exception class_ref 128387 // MyException
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}, ${t1} ${p1}, ${t2} ${p2}, ${t3} ${p3}, ${t4} ${p4}, ${t5} ${p5}, ${t6} ${p6}, ${t7} ${p7}, ${t8} ${p8}, ${t9} ${p9}, ${t10} ${p10}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "Setter
+@param lateralVal that is the lateral value.
+@param positionVal 'i' or 'c'(container and inner).
+@param trixVal x coord of first vertice.
+@param triyVal y coord of first vertice.
+@param tri2xVal x coord of second vertice.
+@param tri2yVal y coord of second vertice.
+@param tri3xVal x coord of third vertice.
+@param tri3yVal y coord of third vertice.
+@param rotateVal rotating degree.
+@param pos_xVal main coord x.
+@param pos_yVal main coord y.
+@exception MyException throws exception if parameters are unvalid.
+"
+      end
+
+      operation 142211 "area"
+	public explicit_return_type "double"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "calculate the one Triangle's area.
+@return double area returning.
+"
+      end
+
+      operation 142339 "perimeter"
+	public explicit_return_type "double"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "calculate the one Triangle's perimeter.
+@return double perimeter returning.
+"
+      end
+
+      operation 142467 "increment"
+	public return_type class_ref 128131 // Shape
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "add the Triangle's center coordinates 1.0.
+@return Shape object.
+"
+      end
+
+      operation 142595 "decrement"
+	public return_type class_ref 128131 // Shape
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "decrement the Triangle's center coordinates 1.0.
+@return Shape object.
+"
+      end
+
+      operation 142723 "compareTo"
+	public explicit_return_type "int"
+	nparams 1
+	  param inout name "comp" type class_ref 128131 // Shape
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "compare the other Shape object based on areas.
+@param comp the conparing shape object.
+@return returns int handled compare value(like the strcmp).
+"
+      end
+
+      operation 142851 "draw"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "shape" explicit_type "Graphics"
+	nexceptions 1
+	  exception class_ref 128387 // MyException
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "drawing method in JPanel.
+@param shape the drawing shape object.
+@exception MyException if position is different than 'i' or 'c'.
+"
+      end
+    end
+
+    class 129667 "PolygonVect"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 129283 // <generalisation>
+	relation 129283 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 129283 // <generalisation>
+	  b parent class_ref 129027 // Polygon
+      end
+
+      classrelation 129411 // polyvector (<unidirectional association>)
+	relation 129411 --->
+	  stereotype "ArrayList"
+	  a role_name "polyvector" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
+"
+	    classrelation_ref 129411 // polyvector (<unidirectional association>)
+	  b parent class_ref 129155 // Point2d
+      end
+
+      operation 137091 "CircleEquationY"
+	private explicit_return_type "double"
+	nparams 4
+	  param in name "centerX" explicit_type "double"
+	  param in name "centerY" explicit_type "double"
+	  param in name "radius" explicit_type "int"
+	  param in name "yourX" explicit_type "double"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}, ${t1} ${p1}, ${t2} ${p2}, ${t3} ${p3}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "helper function that provide circle's coordinates.
+"
+      end
+
+      operation 137219 "PolygonVect"
+	public explicit_return_type ""
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "no parameter constructor that construct the arraylist and calls super classe's constructor.
+"
+      end
+
+      operation 137347 "PolygonVect"
+	public explicit_return_type ""
+	nparams 1
+	  param inout name "pointVector" explicit_type "ArrayList<Point2d>"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "no parameter constructor that construct the arraylist and calls super classe's constructor.
+@param pointVector the construct based on this ArrayList.
+"
+      end
+
+      operation 137475 "PolygonVect"
+	public explicit_return_type ""
+	nparams 1
+	  param inout name "rec" type class_ref 129411 // Rectangle
+	nexceptions 1
+	  exception class_ref 128387 // MyException
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "Rectangle constructor that construct based on Rectangle object.
+@param rec that is Rectangle that will convert.
+@exception MyException if entered parameter is not valid then throws exception.
+"
+      end
+
+      operation 137603 "PolygonVect"
+	public explicit_return_type ""
+	nparams 1
+	  param inout name "tri" type class_ref 129539 // Triangle
+	nexceptions 1
+	  exception class_ref 128387 // MyException
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "Triangle constructor that construct based on Triangle object.
+@param tri that is Triangle that will convert.
+@exception MyException if entered parameter is not valid then throws exception.
+"
+      end
+
+      operation 137731 "PolygonVect"
+	public explicit_return_type ""
+	nparams 1
+	  param inout name "cir" type class_ref 128003 // Circle
+	nexceptions 1
+	  exception class_ref 128387 // MyException
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "Circle constructor that construct based on Circle object.
+@param cir that is Circle that will convert.
+@exception MyException if entered parameter is not valid then throws exception.
+"
+      end
+
+      operation 137859 "at"
+	public return_type class_ref 129155 // Point2d
+	nparams 1
+	  param in name "index" explicit_type "int"
+	nexceptions 1
+	  exception class_ref 128387 // MyException
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "return the that indexes showed value.
+@param index index value.
+@exception MyException if entered parameter is not valid then throws exception.
+@return returns in it indexes value.
+"
+      end
+
+      operation 137987 "draw"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "shape" explicit_type "Graphics"
+	nexceptions 1
+	  exception class_ref 128387 // MyException
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "Draw the owning parameters.
+@param shape JFrame that will print out.
+@exception MyException if entered parameter is not valid then throws exception.
+"
+      end
+    end
+  end
+
+  deploymentview 128003 "161044054_CSE241_HW7 2"
+    //deployment diagram settings
+    deploymentdiagramsettings
+     end
+    artifact 128003 "Shape"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import java.awt.Graphics;
+${definition}"
+      associated_elems
+	class_ref 128131 // Shape
+      end
+    end
+
+    artifact 128131 "Circle"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import java.awt.*;
+${definition}"
+      associated_elems
+	class_ref 128003 // Circle
+      end
+      comment "Hold the one Circle in it(with details).
+@author fatihselimyakar
+@version 1.0.0
+"
+    end
+
+    artifact 128259 "ComposedShape"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import java.awt.Graphics;
+${definition}"
+      associated_elems
+	class_ref 128515 // ComposedShape
+      end
+      comment "Calculate and generate the other classes datas.
+@author fatihselimyakar
+@version 1.0.0
+"
+    end
+
+    artifact 128387 "Globals"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import java.lang.*;
+import java.awt.*;
+import java.util.*;
+${definition}"
+      associated_elems
+	class_ref 128643 // Globals
+      end
+      comment "Hold the all of global functions.
+@author fatihselimyakar
+@version 1.0.0
+"
+    end
+
+    artifact 128515 "HW7"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import java.awt.Color;
+import java.awt.EventQueue;
+import java.awt.Graphics;
+import java.awt.Polygon;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import javax.swing.GroupLayout;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.LayoutStyle.ComponentPlacement;
+${definition}"
+      associated_elems
+	class_ref 128771 // HW7
+      end
+      comment "Test and create a JFrame and draw class.
+@author fatihselimyakar
+@version 1.0.0
+"
+    end
+
+    artifact 128643 "MyException"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+${definition}"
+      associated_elems
+	class_ref 128387 // MyException
+      end
+    end
+
+    artifact 128771 "Polygon"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import java.awt.*;
+${definition}"
+      associated_elems
+	class_ref 129027 // Polygon
+      end
+      comment "abstract super class then I use that extends in other classes.
+@author fatihselimyakar
+@version 1.0.0
+"
+    end
+
+    artifact 128899 "PolygonDyn"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import java.awt.*;
+import java.util.*;
+import java.lang.*;
+${definition}"
+      associated_elems
+	class_ref 129283 // PolygonDyn
+      end
+    end
+
+    artifact 129027 "PolygonVect"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import java.awt.*;
+import java.util.*;
+import java.lang.*;
+${definition}"
+      associated_elems
+	class_ref 129667 // PolygonVect
+      end
+      comment "Holds a polygon with ArrayList.
+@author fatihselimyakar
+@version 1.0.0
+"
+    end
+
+    artifact 129155 "Rectangle"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import java.awt.*;
+${definition}"
+      associated_elems
+	class_ref 129411 // Rectangle
+      end
+      comment "Holds a Rectangle.
+@author fatihselimyakar
+@version 1.0.0
+"
+    end
+
+    artifact 129283 "Triangle"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import java.awt.*;
+${definition}"
+      associated_elems
+	class_ref 129539 // Triangle
+      end
+      comment "Holds a Triangle
+@author fatihselimyakar
+@version 1.0.0
+"
+    end
+  end
+
+  classview 128259 "Diagram"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    classdiagram 128003 "hw7-classdiagram"
+      classdiagramsettings member_max_width 0 end
+      size A4
+    end
+  end
+end

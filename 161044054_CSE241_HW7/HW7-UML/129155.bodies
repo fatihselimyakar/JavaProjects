@@ -1,0 +1,22 @@
+class Point2d
+!!!134147.java!!!	Point2d()
+/*intentionally empty*/
+!!!134275.java!!!	Point2d(in newX : double, in newY : double)
+            if(newX>=0&&newY>=0){
+                polygonX=newX;
+                polygonY=newY;
+            }
+            else
+                throw new MyException("Error your constructor isn't true");
+!!!134403.java!!!	set(in newX : double, in newY : double) : void
+            if(newX>=0&&newY>=0){
+                polygonX=newX;
+                polygonY=newY;
+            }
+            else
+                throw new MyException("Error your set function isn't true");
+            return;
+!!!134531.java!!!	getX() : double
+ return polygonX;
+!!!134659.java!!!	getY() : double
+ return polygonY;

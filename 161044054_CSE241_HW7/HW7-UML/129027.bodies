@@ -1,0 +1,30 @@
+class Polygon
+!!!133891.java!!!	Polygon()
+        this(0,0,0,'c');
+!!!134019.java!!!	Polygon(in x : double, in y : double, in newRotate : int, in p : char)
+        pos_x=x;
+        pos_y=y;
+        rotate=newRotate;
+        position=p;
+!!!134787.java!!!	getPosX() : double
+ return pos_x;
+!!!134915.java!!!	getPosY() : double
+ return pos_y;
+!!!135043.java!!!	getRotate() : int
+ return rotate;
+!!!135171.java!!!	getPosition() : char
+ return position;
+!!!135427.java!!!	area() : double
+        return areaPoly;
+!!!135555.java!!!	perimeter() : double
+        return periPoly;
+!!!135683.java!!!	increment() : Shape
+        ++pos_x;
+        ++pos_y;
+        return this;
+!!!135811.java!!!	decrement() : Shape
+        --pos_x;
+        --pos_y;
+        return this;
+!!!135939.java!!!	compareTo(inout comp : Shape) : int
+        return Double.compare(area(),comp.area());
